@@ -10,6 +10,14 @@ namespace Strategy001
     {
         static void Main(string[] args)
         {
+            var ms = StrategyFactory.GetDiscountStrategyFor(
+                StrategyType.QuickSortType);
+            ms.MyMethod();
+            var sl = new SortedList(
+                StrategyFactory.GetDiscountStrategyFor(
+                    StrategyType.QuickSortType));
+            sl.MyMethod();
+            Console.ReadKey();
         }
     }
 }
